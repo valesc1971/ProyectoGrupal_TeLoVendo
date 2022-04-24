@@ -1,0 +1,65 @@
+{% extends 'aplicacion1/layout.html' %} 
+{% block content %}  
+{% load static %}
+
+  <link href="{% static 'aplicacion1/style.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body>
+	<div>
+		<h1>Pastelería CampCake</h1>
+	</div>
+
+
+<main>
+	
+
+	<aside>
+	    <div class="galeria">
+            <h1>Nuestro Local</h1>
+            <div class="linea"></div>
+            <div class="contenedor-imagenes">
+                <div class="imagen">
+                    <img src="https://i.pinimg.com/originals/88/9f/0a/889f0ac220dc834b373c9e958041ae30.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="imagen">
+                    <!--<img src="aplicacion1/images/LOGO1.png" alt="">-->
+                    <img src="{% static 'aplicacion1/images/LOGO1.png' %}" alt="LOGO1.png" >
+                    
+                </div>
+                <div class="imagen">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-p/12/60/39/f7/photo1jpg.jpg" class="img-fluid" class="img-fluid" alt="">
+                </div>
+            </div>
+      </div>
+	</aside>
+  <section>
+	<h2>Sobre Nosotros</h2>
+	<p>Somos un emprendimiento de un grupo de jovenes, que vendemos productos de pastelería y panadería en la ciudad de Viña del Mar. Nos encontramos ubicados en Calle Valparaíso 328 y nuestros productos son elaborados con los más altos estándares de calidad, utilizando buena conservación de las materias primas y procesos de control.</p>
+	</section>
+</main>
+
+{% endblock %}
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="scripts/main.js"></script
+</html>
+
+<!-- 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    
+    </head>
+    <body>
+        <h1>Bienvenidos a TeLoVendo24</h1>
+    </body>
+    </html>
+    -->

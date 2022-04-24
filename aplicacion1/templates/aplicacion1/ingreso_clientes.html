@@ -1,0 +1,16 @@
+{% extends 'aplicacion1/layout.html' %} 
+{% block content %}  
+{% load static %}
+
+<form action "aplicacion1/ingreso_clientes.html" method = "post">
+
+    {% csrf_token %}
+    <h1> Ingreso de Clientes </h1>
+
+    {{form.as_p}}
+
+    <input type="submit">registrar </input>
+
+</form>
+
+{% endblock %}
