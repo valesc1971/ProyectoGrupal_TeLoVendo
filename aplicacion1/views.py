@@ -1,13 +1,17 @@
 from django.shortcuts import redirect, render
 from .models import Cliente
-from .forms import RegistroClienteForm, LoginForm
+from .forms import RegistroClienteForm, LoginForm, UserRegisterForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login, logout
 from django.contrib.auth.decorators import login_required
 from django.views.defaults import page_not_found
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+
 
 
 # Create your views here.
+
 
 def index(request):
     return render (request, 'aplicacion1/index.html')
@@ -77,4 +81,18 @@ def salir(request):
 def custom_page_not_found_view(request, exception):
     return render(request, "404.html", {})
 
- 
+def register(request):
+    form = UserRegisterForm()
+    print("hola")
+    if request.method == "POST":
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            messages.success(request, f'Usuario {username} creado exitosamente.')
+            return redirect('login')
+    else:
+
+        form = UserRegisterForm()
+    context = {'form':form}
+    return render(request, 'aplicacion1/register.html', context)
