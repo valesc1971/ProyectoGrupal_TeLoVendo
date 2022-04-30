@@ -39,7 +39,7 @@ Finalmente, para ejecutar el programa se debe levantar el servidor en Python con
 <a name="Consideraciones"></a>
 ## Consideraciones
 
-Este proyecto es una continuacion del proyecto ubicado en XXXXXXX.Para la informacion inicial de esteproyecto, favor revisar el archivo readme de ese repositorio (Consideraciones)
+Este proyecto es una continuacion del proyecto ubicado en https://github.com/valesc1971/ABPro7.git .Para la informacion inicial de esteproyecto, favor revisar el archivo readme de ese repositorio (Consideraciones)
 
 Adicionalmente, se usa el framework Django y lenguiaje Python para administrar el sistema. 
 
