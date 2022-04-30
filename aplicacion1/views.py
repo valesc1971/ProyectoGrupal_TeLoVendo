@@ -3,7 +3,7 @@ from .models import Cliente
 from .forms import RegistroClienteForm, LoginForm, UserRegisterForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login, logout
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.views.defaults import page_not_found
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
@@ -30,8 +30,9 @@ def clientes(request):
     usuario=Cliente.objects.all()
     return render (request, 'aplicacion1/clientes.html', {"data":usuario})
 
-
-def ingreso_clientes (request):
+#@login_required
+@permission_required("is_staff")
+def ingreso_clientes(request):
     form = RegistroClienteForm()
 
     if request.method == 'POST':

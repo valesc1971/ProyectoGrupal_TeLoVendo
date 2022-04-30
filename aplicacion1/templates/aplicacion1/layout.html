@@ -36,13 +36,21 @@
 				<a class="nav-link" href="{% url 'clientes' %}" id="form-contact">Listado clientes</a>
 				</li>
 				</li>
+				<a class="nav-link" href="{% url 'register' %}" id="form-contact">Registro Usuario</a>
+				</li>
+				</li>
 				<a class="nav-link" href="/login" id="form-contact">Login</a>
 				</li>
 				</li>
 				<a class="nav-link" href="/salir" id="form-contact">Salir</a>
 				</li>
+			
 			</ul>  
+			<div id='nombre_usuario'>
+			<h1 id="usuario">Usuario: {{user.username}}</h1>	
+			</div>
 		</div>
+
 </nav>
 
 
