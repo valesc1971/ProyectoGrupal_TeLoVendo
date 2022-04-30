@@ -46,6 +46,8 @@ Adicionalmente, se usa el framework Django y lenguiaje Python para administrar e
 El sistema cuenta con un menú, en el cual se muestran distintas opciones para ser utilizados por los usuarios, tales como Productos, Pedidos, 
 Estadísticas, Ingreso Clientes, Login y salir. 
 
+El registro de usuarios se puede hacer tanto desde la pagina principal como del admin de Django. sin embargo, la asignacion de permisos, grupos y tipos de usuarios se deben hacer desde el admin de Django por parte del superusuario.
+
 Restricciones:
 El menú Listado de clientes solo puede ser utilizado por los usuarios registrados. Cuando un usuario se registra y se loguea, el sistema le da un mensaje personalizado de de bienvenida. 
 Si el usuario no está registrado no puede acceder a la página de bienvenida. En la opción usuarios se muestra información estadistica de clientes; 
@@ -66,6 +68,8 @@ Se crearon 3 grupos de usuarios: GrupoClientes, GrupoProductos y GrupoPedidos. C
 ![image](https://user-images.githubusercontent.com/99301347/166082101-ea6bf90c-bec1-48d7-8ca0-06afab75a108.png)
 ![image](https://user-images.githubusercontent.com/99301347/166082109-e3479678-21bf-4456-9a71-8cc9634ba6b7.png)
 ![image](https://user-images.githubusercontent.com/99301347/166082112-7fa56657-3b46-4b98-9768-31637382d692.png)
+![image](https://user-images.githubusercontent.com/99301347/166083493-de5dc76c-efbc-40ae-8489-6588ee17685b.png)
+
 
 
 
