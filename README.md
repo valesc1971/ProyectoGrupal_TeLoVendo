@@ -55,7 +55,7 @@ en Ingresar Clientes aparece un formulario para que los clientes que quieran com
 pueden acceder al sistema, el cual les da un mensaje de bienvenida y en Salir el usuario sale del sistema con un mensaje de despedida."
 
 Permisos administrativos:
-Se crearon 3 grupos de usuarios: GrupoClientes, GrupoProductos y GrupoPedidos. Cada uno de estos grupos tiene asignado 1 usuarios con permisos CRUD para su respectivo grupo. Por ejemplo, si el suaurio esta asignado al GrupoPedidos, solo tiene visibilidad de la informacion de Pedidos.
+Se crearon 3 grupos de usuarios: GrupoClientes, GrupoProductos y GrupoPedidos. Cada uno de estos grupos tiene asignado 1 usuarios con permisos CRUD para su respectivo grupo. Por ejemplo, si el usuario esta asignado al GrupoPedidos, solo tiene visibilidad de la informacion de Pedidos.
 
 
 <a name="Visualizacion"></a>
