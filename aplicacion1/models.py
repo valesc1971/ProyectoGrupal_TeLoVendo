@@ -25,3 +25,10 @@ class Producto(models.Model):
     cantidad=models.CharField(max_length=50)
     proveedor=models.CharField(max_length=50)
 
+class Proveedor(models.Model):
+    nombre=models.CharField(max_length=50)
+    categoria=models.CharField(max_length=50)
+    correo=models.EmailField(max_length=100)
+    ciudad=models.CharField(max_length=50)
+    telefono=models.CharField(max_length=15)
+

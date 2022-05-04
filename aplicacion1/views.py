@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import Cliente
+from .models import Cliente, Proveedor
 from .forms import RegistroClienteForm, LoginForm, UserRegisterForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login, logout
@@ -97,3 +97,8 @@ def register(request):
         form = UserRegisterForm()
     context = {'form':form}
     return render(request, 'aplicacion1/register.html', context)
+
+
+def proveedores(request):
+    proveedor=Proveedor.objects.all()
+    return render (request, 'aplicacion1/proveedores.html', {"data":proveedor})
