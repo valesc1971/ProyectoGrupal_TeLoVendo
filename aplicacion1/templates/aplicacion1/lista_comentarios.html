@@ -1,0 +1,26 @@
+{% extends 'aplicacion1/layout.html' %} 
+
+{% block content%}
+
+<div id='tabla'>
+
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Comentario</th>
+    </tr>
+    {% for com in data %}  
+    <tr>
+      <td>{{com.nombre}}</td>
+      <td>{{com.apellido}}</td>
+      <td>{{com.correo}}</td>
+      <td>{{com.comentario}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</div>
+
+{% endblock %}

@@ -32,3 +32,8 @@ class Proveedor(models.Model):
     ciudad=models.CharField(max_length=50)
     telefono=models.CharField(max_length=15)
 
+class Comentario(models.Model):
+    nombre=models.CharField(max_length=50)
+    apellido=models.CharField(max_length=50)
+    correo=models.EmailField(max_length=100)
+    comentario=models.CharField(max_length=150)

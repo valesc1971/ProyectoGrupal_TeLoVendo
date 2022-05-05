@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
-from .models import Cliente, Proveedor
-from .forms import RegistroClienteForm, LoginForm, UserRegisterForm
+from .models import Cliente, Proveedor, Comentario
+from .forms import RegistroClienteForm, LoginForm, UserRegisterForm, ComentarioForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login, logout
 from django.contrib.auth.decorators import login_required, permission_required
@@ -102,3 +102,31 @@ def register(request):
 def proveedores(request):
     proveedor=Proveedor.objects.all()
     return render (request, 'aplicacion1/proveedores.html', {"data":proveedor})
+
+
+def comentario_clientes(request):
+    form = ComentarioForm()
+
+    if request.method == 'POST':
+        
+        form = ComentarioForm(request.POST)
+
+        if form.is_valid():
+
+            com=Comentario()
+            com.nombre=form.cleaned_data["nombre"]
+            com.apellido=form.cleaned_data["apellido"]
+            com.correo=form.cleaned_data["correo"]
+            com.comentario=form.cleaned_data["comentario"]
+
+            com.save()
+            return redirect('comentario_clientes')
+
+        else:
+            print('invalido')
+
+    return render(request, 'aplicacion1/comentario_clientes.html', {'form':form})
+
+def lista_comentarios(request):
+    com=Comentario.objects.all()
+    return render (request, 'aplicacion1/lista_comentarios.html', {"data":com})

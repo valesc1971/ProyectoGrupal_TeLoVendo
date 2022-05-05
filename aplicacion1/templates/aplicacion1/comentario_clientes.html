@@ -1,0 +1,19 @@
+{% extends 'aplicacion1/layout.html' %} 
+{% block content %}  
+{% load static %}
+
+<form action "aplicacion1/comentario_clientes.html" method = "post">
+
+    {% csrf_token %}
+
+    <div id='form_ingreso'>
+        <h1> Comentarios </h1>
+
+        {{form.as_p}}
+
+        <button type="submit">enviar </button>
+
+    </div>
+</form>
+
+{% endblock %}
