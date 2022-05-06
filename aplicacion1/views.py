@@ -130,3 +130,24 @@ def comentario_clientes(request):
 def lista_comentarios(request):
     com=Comentario.objects.all()
     return render (request, 'aplicacion1/lista_comentarios.html', {"data":com})
+
+def editar_comentario(request, id):
+    comentario = Comentario.objects.get(pk=id)
+    form = ComentarioForm(instance=comentario)
+    if request.method == 'POST':
+        
+        form = ComentarioForm(data=request.POST, instance=comentario)
+        form.save()
+        return redirect('lista_comentarios')
+
+    else:
+        return render(request, 'aplicacion1/editar_comentario.html', {'form':form})
+
+def eliminar_comentario(request, id):
+        comentario = Comentario.objects.get(pk=id)
+        comentario.delete()
+        return redirect('/lista_comentarios')
+
+def listar_coment_mail(request,correo):
+    email_list = Comentario.objects.filter(correo=correo)
+    return render(request, 'aplicacion1/lista_comentarios.html', {"correo":email_list})

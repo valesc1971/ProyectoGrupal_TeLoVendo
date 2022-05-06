@@ -15,4 +15,7 @@ urlpatterns = [
     path('proveedores/', views.proveedores, name='proveedores'),
     path('comentario_clientes/', views.comentario_clientes, name='comentario_clientes'),
     path('lista_comentarios/', views.lista_comentarios, name='lista_comentarios'),
+    path('editar_comentario/<int:id>/', views.editar_comentario, name='editar_comentario'),
+    path('eliminar_comentario/<int:id>/', views.eliminar_comentario, name='eliminar_comentario'),
+    path ('listar_coment_mail/<str:correo>/', views.listar_coment_mail, name='listar_coment_mail')
 ]

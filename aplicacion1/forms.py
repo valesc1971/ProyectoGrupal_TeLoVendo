@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
+from .models import Comentario
+
 
 class RegistroClienteForm (forms.Form):
     nombre=forms.CharField (max_length=50, required=True)
@@ -23,8 +25,8 @@ class UserRegisterForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
         help_texts = {k:"" for k in fields}
 
-class ComentarioForm (forms.Form):
-    nombre=forms.CharField (max_length=50, required=True)
-    apellido=forms.CharField (max_length=50, required=True)
-    correo=forms.CharField(widget=forms.EmailInput)
-    comentario=forms.CharField (max_length=150, required=True)
+class ComentarioForm(forms.ModelForm):
+    class Meta:
+        model = Comentario
+        fields = ['nombre', 'apellido', 'correo', 'comentario']
+

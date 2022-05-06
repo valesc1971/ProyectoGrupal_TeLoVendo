@@ -1,0 +1,17 @@
+{% extends 'aplicacion1/layout.html' %}
+{% block content %}
+<form action="" method="POST">
+
+
+    {% csrf_token %}
+    <div id='form_registro'>
+        <h1> revisar email </h1>
+
+        {{ form.as_p }}
+        <button type="submit">mail</button>
+
+    </div>
+
+</form>
+
+{% endblock %}
