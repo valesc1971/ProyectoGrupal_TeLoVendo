@@ -6,16 +6,20 @@
 
   <table>
     <tr>
+      <th>ID</th>
       <th>Nombre</th>
       <th>Categoria</th>
+      <th>Sub Categoria</th>
       <th>Correo</th>
       <th>Ciudad</th>
       <th>Telefono</th>
     </tr>
     {% for prov in data %}  
     <tr>
+      <td>{{prov.id}}</td>
       <td>{{prov.nombre}}</td>
       <td>{{prov.categoria}}</td>
+      <td>{{prov.sub_categoria}}</td>
       <td>{{prov.correo}}</td>
       <td>{{prov.ciudad}}</td>
       <td>{{prov.telefono}}</td>
