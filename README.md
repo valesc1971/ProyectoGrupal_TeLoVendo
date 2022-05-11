@@ -72,6 +72,13 @@ pueden acceder al sistema, el cual les da un mensaje de bienvenida y en Salir el
 Permisos administrativos:
 Se crearon 3 grupos de usuarios: GrupoClientes, GrupoProductos y GrupoPedidos. Cada uno de estos grupos tiene asignado 1 usuarios con permisos CRUD para su respectivo grupo. Por ejemplo, si el usuario esta asignado al GrupoPedidos, solo tiene visibilidad de la informacion de Pedidos.
 
+Relaciones entre Modelos de la Base de Datos:
+Se agregaron 2 modelos (Categoria y Subcategoria) para hacer relaciones 1 a muchos con el Modelo Proveedor, de tal forma que cuando se crea o registra un nuevo Proveedor, se debe seleccionar el tipo de Categoria y el de Subcategoria. Esto se puede visualizar en el admin de la aplicacion
+
+![image](https://user-images.githubusercontent.com/99301347/167749902-25846125-4850-4ff7-8b63-694942e5256b.png)
+![image](https://user-images.githubusercontent.com/99301347/167749954-592a701a-814c-43d4-8a9e-b1e5c27721b2.png)
+
+
 
 <a name="Visualizacion"></a>
 ## Visualizacion del sitio web
