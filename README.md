@@ -24,6 +24,7 @@ Este proyecto fue creado usando:
 * DataTable plugin
 * Python 3.10.4
 * Django 4.0.4
+* PostgreSQL
 
 <a name="Instalacion"></a>
 ## Instalacion
@@ -44,9 +45,23 @@ Este proyecto es una continuacion del proyecto ubicado en https://github.com/val
 Adicionalmente, se usa el framework Django y lenguiaje Python para administrar el sistema. 
 
 El sistema cuenta con un menú, en el cual se muestran distintas opciones para ser utilizados por los usuarios, tales como Productos, Pedidos, 
-Estadísticas, Ingreso Clientes, Login y salir. 
+Estadísticas, Ingreso Clientes, Login y Salir. 
 
 El registro de usuarios se puede hacer tanto desde la pagina principal como del admin de Django. sin embargo, la asignacion de permisos, grupos y tipos de usuarios se deben hacer desde el admin de Django por parte del superusuario.
+
+Se realizo la migracion de base de datos desde SQLite a PostgreSQL
+
+Se agrego una nueva clase de Proveedores para registrar los datos de proveedores de la empresa.
+
+Se creo otra clase de Comentarios que tiene como objetivo que el cliente ingrese comentarios respecto a los productos de la empresa. Estos comentarios, se pueden crear, filtrar usando el email del usuario y se pueden editar o eliminar. 
+Los comentarios se pueden ingresar con la opcion Comentarios ubicada en la barra de navegacion
+
+![image](https://user-images.githubusercontent.com/99301347/167232744-03732295-7f5a-4456-bc68-cb685a2ac558.png)
+
+Para  filtrar, editar o eliminar los comentarios, se debe usar la opcion Lista Comentarios en la barra de navegacion
+
+![image](https://user-images.githubusercontent.com/99301347/167232732-6b6a4b2c-0490-4b4f-961d-c4650ecb4af0.png)
+
 
 Restricciones:
 El menú Listado de clientes solo puede ser utilizado por los usuarios registrados. Cuando un usuario se registra y se loguea, el sistema le da un mensaje personalizado de de bienvenida. 
