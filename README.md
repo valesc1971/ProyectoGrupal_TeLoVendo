@@ -40,9 +40,9 @@ Finalmente, para ejecutar el programa se debe levantar el servidor en Python con
 <a name="Consideraciones"></a>
 ## Consideraciones
 
-Este proyecto es una continuacion del proyecto ubicado en https://github.com/valesc1971/ABPro7.git .Para la informacion inicial de esteproyecto, favor revisar el archivo readme de ese repositorio (Consideraciones)
+Este proyecto es una continuacion del proyecto ubicado en https://github.com/valesc1971/ABPro7.git .Para la informacion inicial de este proyecto, favor revisar el archivo readme de ese repositorio (Consideraciones)
 
-Adicionalmente, se usa el framework Django y lenguiaje Python para administrar el sistema. 
+Adicionalmente, se usa el framework Django y lenguaje Python para administrar el sistema. 
 
 El sistema cuenta con un menú, en el cual se muestran distintas opciones para ser utilizados por los usuarios, tales como Productos, Pedidos, 
 Estadísticas, Ingreso Clientes, Login y Salir. 
@@ -63,17 +63,20 @@ Para  filtrar, editar o eliminar los comentarios, se debe usar la opcion Lista C
 ![image](https://user-images.githubusercontent.com/99301347/167232732-6b6a4b2c-0490-4b4f-961d-c4650ecb4af0.png)
 
 
-Restricciones:
-El menú Listado de clientes solo puede ser utilizado por los usuarios registrados. Cuando un usuario se registra y se loguea, el sistema le da un mensaje personalizado de de bienvenida. 
-Si el usuario no está registrado no puede acceder a la página de bienvenida. En la opción usuarios se muestra información estadistica de clientes; 
-en Ingresar Clientes aparece un formulario para que los clientes que quieran comprar en línea puedan hacerlo, ingresando sus datos. En Login los usuarios registrados
-pueden acceder al sistema, el cual les da un mensaje de bienvenida y en Salir el usuario sale del sistema con un mensaje de despedida."
+**Restricciones**:
+El menú Listado de clientes solo puede ser utilizado por los usuarios registrados. Cuando un usuario se registra y se loguea, el sistema le da un mensaje personalizado de bienvenida. 
+Si el usuario no está registrado no puede acceder a la página de bienvenida. 
+En la opción usuarios se muestra información estadistica de clientes.
+En Ingresar Clientes aparece un formulario para que los clientes que quieran comprar en línea puedan hacerlo, ingresando sus datos. 
+En Login los usuarios registrados pueden acceder al sistema, el cual les da un mensaje de bienvenida.
+En Salir el usuario sale del sistema con un mensaje de despedida.
 
-Permisos administrativos:
-Se crearon 3 grupos de usuarios: GrupoClientes, GrupoProductos y GrupoPedidos. Cada uno de estos grupos tiene asignado 1 usuarios con permisos CRUD para su respectivo grupo. Por ejemplo, si el usuario esta asignado al GrupoPedidos, solo tiene visibilidad de la informacion de Pedidos.
+**Permisos administrativos**:
+Se crearon 3 grupos de usuarios: GrupoClientes, GrupoProductos y GrupoPedidos. 
+Cada uno de estos grupos tiene asignado 1 usuario con permisos CRUD para su respectivo grupo. Por ejemplo, si el usuario esta asignado al GrupoPedidos, solo tiene visibilidad de la informacion de Pedidos.
 
-Relaciones entre Modelos de la Base de Datos:
-Se agregaron 2 modelos (Categoria y Subcategoria) para hacer relaciones 1 a muchos con el Modelo Proveedor, de tal forma que cuando se crea o registra un nuevo Proveedor, se debe seleccionar el tipo de Categoria y el de Subcategoria. Esto se puede visualizar en el admin de la aplicacion
+**Relaciones entre Modelos de la Base de Datos**:
+Se agregaron 2 modelos (Categoria y Subcategoria) para hacer relaciones 1 a muchos con el Modelo Proveedor, de tal forma que cuando se crea o registra un nuevo Proveedor, se debe seleccionar el tipo de Categoria y el de Subcategoria. Esto se puede visualizar en el admin de la aplicacion. El diagrama Entidad-Relacion de la base de datos, se encuentra en el archivo XXXXX
 
 ![image](https://user-images.githubusercontent.com/99301347/167749902-25846125-4850-4ff7-8b63-694942e5256b.png)
 ![image](https://user-images.githubusercontent.com/99301347/167749954-592a701a-814c-43d4-8a9e-b1e5c27721b2.png)
